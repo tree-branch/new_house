@@ -11,7 +11,7 @@ class reportData():
 
     def __init__(self, reportFileName=None):
         if reportFileName is None:
-            self._reportFileName = '房屋价格情况统计' + time.strftime('%Y%m%d', time.localtime(time.time()))
+            self._reportFileName = '新房价格情况统计' + time.strftime('%Y%m%d', time.localtime(time.time()))
         else:
             self._reportFileName = reportFileName
 

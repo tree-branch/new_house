@@ -42,7 +42,7 @@ class saveData():
         # logging.basicConfig(level=logging.DEBUG)
         timestring = time.strftime('%Y%m%d%H', time.localtime(time.time()))
         # import datetime
-        # timestring = (datetime.datetime.now() - datetime.timedelta(hours=1)).strftime('%Y%m%d%H')
+        # timestring = (datetime.datetime.now() - datetime.timedelta(hours=25)).strftime('%Y%m%d%H')
         tablename = 'TNew' + timestring + 'TheFutureOfHome'
         TestObject = leancloud.Object.extend(tablename)
         for i in range(0, len(houseName)):
