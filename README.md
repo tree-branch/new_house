@@ -1,7 +1,7 @@
 # new_house
 此为新房数据,需要二手房数据的移步[house](https://github.com/tree-branch/house)
 
-爬取贝壳找房、链家、安居客、58同城（赶集后续更新）的房源信息，便于广大未买房子的朋友们尽快成为房奴！！！Crawl the house informations of lianjia.com (anjvke.com, 58.com, ganji.com after the update), convenient for the majority of friends who did not buy the house as soon as to become the mortgage slave!!!
+爬取贝壳找房、链家、安居客、58同城的房源信息，便于广大未买房子的朋友们尽快成为房奴！！！Crawl the house informations of lianjia.com (anjvke.com, 58.com, ganji.com after the update), convenient for the majority of friends who did not buy the house as soon as to become the mortgage slave!!!
 
 ## 直接运行
 修改config.ini内的mysql链接地址
