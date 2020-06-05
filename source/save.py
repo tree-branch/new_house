@@ -6,7 +6,7 @@ import time
 from .beike import BeikeParser
 # from .anjuke import AnjukeParser
 # from .ganji import GanjiParser
-# from .lianjia import LianjiaParser
+from .lianjia import LianjiaParser
 # from .tongcheng import TongchengParser
 
 
@@ -162,12 +162,12 @@ class saveData():
         houseName, villageName, houseNote, houseTotlePrice, houseUnitPrice, houseLink, houseImg = beike.feed(html)
         self._saveData('贝壳', houseName, villageName, houseNote, houseTotlePrice, houseUnitPrice, houseLink, houseImg)
 
-    # # 链家
-    # def lianjia_save(self, html):
-    #     lianjia = LianjiaParser()
-    #     houseName, villageName, houseNote, houseTotlePrice, houseUnitPrice, houseLink, houseImg = lianjia.feed(html)
-    #     self._saveData('链家', houseName, villageName, houseNote, houseTotlePrice, houseUnitPrice, houseLink, houseImg)
-    #
+    # 链家
+    def lianjia_save(self, html):
+        lianjia = LianjiaParser()
+        houseName, villageName, houseNote, houseTotlePrice, houseUnitPrice, houseLink, houseImg = lianjia.feed(html)
+        self._saveData('链家', houseName, villageName, houseNote, houseTotlePrice, houseUnitPrice, houseLink, houseImg)
+
     # # 58同城
     # def tongcheng_save(self, html):
     #     tongcheng = TongchengParser()

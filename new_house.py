@@ -28,14 +28,14 @@ if __name__ == '__main__':
     for beike_html in beike_htmls:
         save.beike_save(beike_html)
 
-    # # 链家 （例：北京 0-600万 60-100平） 根据自己需求添加链接
-    # lianjia1 = getHtml('''https://bj.lianjia.com/ershoufang/bp0ep600ba60ea100l3/rs/''')
-    # lianjia2 = getHtml('''https://bj.lianjia.com/ershoufang/pg2l3ba60ea100ep600/''')
-    # lianjia3 = getHtml('''https://bj.lianjia.com/ershoufang/pg3l3ba60ea100ep600/''')
-    # lianjia_htmls = [lianjia1, lianjia2, lianjia3]
-    # for lianjia_html in lianjia_htmls:
-    #     save.lianjia_save(lianjia_html)
-    #
+    # 链家 （例：北京 昌平 朝阳 大兴） 根据自己需求添加链接
+    lianjia1 = getHtml('''https://bj.fang.lianjia.com/loupan/changping-chaoyang-daxing/bp0ep2000nht1pg5/#daxing''')
+    lianjia2 = getHtml('''https://bj.fang.lianjia.com/loupan/changping/nht1pg2/''')
+    lianjia3 = getHtml('''https://bj.fang.lianjia.com/loupan/changping/nht1pg1/''')
+    lianjia_htmls = [lianjia1, lianjia2, lianjia3]
+    for lianjia_html in lianjia_htmls:
+        save.lianjia_save(lianjia_html)
+
     # # 58同城 高新园区 80-120W 3室 精装修
     # tongcheng1 = getHtml('''http://bj.58.com/ershoufang/?PGTID=0d00000c-0000-099e-5f9d-eb7cd9b2d735&ClickID=1&huansuanyue=200_600&bunengdaikuan=0&area=60_100''')
     # tongcheng2 = getHtml('''http://bj.58.com/ershoufang/pn2/?huansuanyue=200_600&bunengdaikuan=0&area=60_100&PGTID=0d300000-0000-0b90-1e0b-bf894f74b13a&ClickID=1''')

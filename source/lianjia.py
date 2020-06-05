@@ -2,7 +2,7 @@
 
 from html.parser import HTMLParser
 
-class BeikeParser(HTMLParser):
+class LianjiaParser(HTMLParser):
     def __init__(self):
         super().__init__()
         # 存储中间数据（链家为总房价与单价）
@@ -25,7 +25,6 @@ class BeikeParser(HTMLParser):
         self.flag = []
         # url连接头
         self.urlHead = ""
-        self.sign = 0
 
     def feed(self, data):
         super().feed(data)
@@ -41,12 +40,12 @@ class BeikeParser(HTMLParser):
         return self.houseName, self.villageName, self.houseNote, self.houseTotlePrice, self.houseUnitPrice, self.houseLink, self.houseImg
 
     def handle_starttag(self, tag, attrs):
-        if self.urlHead == "" and tag == "a" and ("class", "") in attrs:
+        if tag == "a" and ("class", "on") in attrs:
             for attr in attrs:
-                if attr[0] == "href" and attr[1][-8:] == "/loupan/":
-                    self.urlHead = attr[1][:-8]
+                if attr[0] == "href":
+                    self.urlHead = attr[1]
                     break
-        elif tag == "a" and ("class", "name ") in attrs:
+        elif tag == "a" and ("class", "resblock-img-wrapper ") in attrs:
             for attr in attrs:
                 if attr[0] == "title":
                     self.houseName.append(attr[1])
@@ -60,11 +59,8 @@ class BeikeParser(HTMLParser):
                 if attr[0] == "data-original":
                     self.houseImg.append(attr[1])
                     break
-        elif tag == "a" and ("class", "resblock-location") in attrs:
-            for attr in attrs:
-                if attr[0] == "title":
-                    self.villageName.append(attr[1])
-                    break
+        elif tag == "a" and ("data-xftrack", "10254") in attrs:
+            self.flag.append("villageName")
         elif tag == "a" and ("class", "resblock-room") in attrs:
             self.flag.append("houseNote")
             self.houseNote.append('')
@@ -94,7 +90,10 @@ class BeikeParser(HTMLParser):
             elif self.flag[-1] == "div" and self.flag[-2] == "housePrice":
                 self.houseTotlePrice[-1] = self.houseTotlePrice[-1] + data.replace(' ','')
                 self.flag.pop()
+            elif self.flag[-1] == "villageName":
+                self.villageName.append(data)
+                self.flag.pop()
 
     def handle_endtag(self, tag):
-        if tag == "a" and len(self.flag) > 0 and self.flag[-1] == "houseNote":
+        if tag == "div" and len(self.flag) > 0 and self.flag[-1] == "houseNote":
             self.flag.pop()
