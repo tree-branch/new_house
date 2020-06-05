@@ -1,0 +1,715 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content="HTMLTestRunner 0.9.1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.common.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!-- <script type="text/javascript" src="js/echarts.common.min.js"></script> -->
+    <script type="text/javascript" class="init">
+        $(document).ready(function() {
+            $('#day1').DataTable();
+            $('#day7').DataTable();
+            $('#day30').DataTable();
+        } );
+    </script>
+    <style type="text/css" media="screen">
+        body        { font-family: Microsoft YaHei,Consolas,arial,sans-serif; font-size: 80%; }
+        table       { font-size: 100%; }
+        pre         { white-space: pre-wrap;word-wrap: break-word; }
+        /* -- heading ---------------------------------------------------------------------- */
+        h1 {
+            font-size: 16pt;
+            color: gray;
+        }
+        .heading {
+            margin-top: 0ex;
+            margin-bottom: 1ex;
+        }
+        .heading .attribute {
+            margin-top: 1ex;
+            margin-bottom: 0;
+        }
+        .heading .description {
+            margin-top: 2ex;
+            margin-bottom: 3ex;
+        }
+        /* -- css div popup ------------------------------------------------------------------------ */
+        a.popup_link {
+        }
+        a.popup_link:hover {
+            color: red;
+        }
+        .popup_window {
+            display: none;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            /*border: solid #627173 1px; */
+            padding: 10px;
+            /*background-color: #E6E6D6; */
+            font-family: "Lucida Console", "Courier New", Courier, monospace;
+            text-align: left;
+            font-size: 8pt;
+            /* width: 500px;*/
+        }
+        /* -- report ------------------------------------------------------------------------ */
+        #show_detail_line {
+            margin-top: 3ex;
+            margin-bottom: 1ex;
+        }
+        #result_table {
+            width: 99%;
+        }
+        #header_row {
+            font-weight: bold;
+            color: #303641;
+            background-color: #ebebeb;
+        }
+        #total_row  { font-weight: bold; }
+        .passClass  { background-color: #bdedbc; }
+        .failClass  { background-color: #ffefa4; }
+        .errorClass { background-color: #ffc9c9; }
+        .passCase   { color: #6c6; }
+        .failCase   { color: #FF6600; font-weight: bold; }
+        .errorCase  { color: #c00; font-weight: bold; }
+        .hiddenRow  { display: none; }
+        .testcase   { margin-left: 2em; }
+        /* -- ending ---------------------------------------------------------------------- */
+        #ending {
+        }
+        #div_base {
+            position:absolute;
+            top:0%;
+            left:5%;
+            right:5%;
+            width: auto;
+            height: auto;
+            margin: -15px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div_base">
+
+    <div class='page-header'>
+        <h1>房屋价格情况统计</h1>
+        <p class='attribute'><strong>统计时间:</strong> 2020-06-05 14:14:23</p>
+        <p class='attribute'><strong>运行时长:</strong> 1.3397677000000003s</p>
+    </div>
+
+        <h2>较上1天</h2>
+        <table id="day1" class="display" style="width:100%">
+            <thead>
+            <tr>
+                <th>升降标志</th>
+                <th>房屋名</th>
+                <th>房屋备注</th>
+                <th>房屋总价</th>
+                <th>房屋历史总价</th>
+                <th>房屋单价</th>
+                <th>小区名</th>
+                <th>房屋链接</th>
+                <th>来源网站</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>新增</td>
+                <td>和悦春风</td>
+                <td>户型：3室/4室建面82-107㎡</td>
+                <td>总价273万/套</td>
+                <td>-</td>
+                <td>35000 元/平(均价)</td>
+                <td>庞各庄镇瓜乡路与永兴河交汇处</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_hycfbkzcf/" target="_blank">//bj.fang.ke.com/loupan/p_hycfbkzcf/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>融创公园壹号</td>
+                <td></td>
+                <td>总价268万/套</td>
+                <td>-</td>
+                <td>40000 元/平(均价)</td>
+                <td>孙村公园西侧</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_rcgyyhbkzwc/" target="_blank">//bj.fang.ke.com/loupan/p_rcgyyhbkzwc/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>首开璞瑅墅</td>
+                <td>户型：3室/4室建面297-644㎡</td>
+                <td>总价1600万/套</td>
+                <td>-</td>
+                <td>1600 万/套(总价)</td>
+                <td>榆垡镇京开高速（106国道段）东侧、榆垡路北侧, 祥和街48号院</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_skptsaakyo/" target="_blank">//bj.fang.ke.com/loupan/p_skptsaakyo/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中南湾</td>
+                <td>户型：2室/3室建面97-135㎡</td>
+                <td>总价520万/套</td>
+                <td>-</td>
+                <td>53000 元/平(均价)</td>
+                <td>五福堂北路与京福路交汇处</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_aabep/" target="_blank">//bj.fang.ke.com/loupan/p_aabep/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>瀛海府</td>
+                <td>户型：3室建面88㎡</td>
+                <td></td>
+                <td>-</td>
+                <td>52449 元/平(均价)</td>
+                <td>黄亦路与京福路交叉口西南侧</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_yhfaftku/" target="_blank">//bj.fang.ke.com/loupan/p_yhfaftku/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>和成璟园</td>
+                <td>户型：3室/4室/5室建面140-346㎡</td>
+                <td>总价868万/套</td>
+                <td>-</td>
+                <td>63000 元/平(均价)</td>
+                <td>三羊北街3号院</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_hcyaaaev/" target="_blank">//bj.fang.ke.com/loupan/p_hcyaaaev/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>首开保利熙悦诚郡</td>
+                <td>户型：3室/4室建面128-160㎡</td>
+                <td>总价1000万/套</td>
+                <td>-</td>
+                <td>79000 元/平(均价)</td>
+                <td>南四环榴乡桥与德贤路交汇处东南角800米处</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_skblxycjaadqm/" target="_blank">//bj.fang.ke.com/loupan/p_skblxycjaadqm/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>北京城建海梓府</td>
+                <td>户型：3室建面105-186㎡</td>
+                <td></td>
+                <td>-</td>
+                <td>800 万/套(总价)</td>
+                <td>三海子东路与姜场街交汇处南150米, 四海路1号院</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_bjcjhzfaaaql/" target="_blank">//bj.fang.ke.com/loupan/p_bjcjhzfaaaql/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>万和斐丽</td>
+                <td>户型：1室/3室建面62-90㎡</td>
+                <td></td>
+                <td>-</td>
+                <td>52449 元/平(均价)</td>
+                <td>经二路与瀛安街交叉口北200米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_whflbidvq/" target="_blank">//bj.fang.ke.com/loupan/p_whflbidvq/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>金地悦风华</td>
+                <td>户型：3室建面89-134㎡</td>
+                <td></td>
+                <td>-</td>
+                <td>55000 元/平(均价)</td>
+                <td>广阳大街与春和路交口西南</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_jdyfhbimds/" target="_blank">//bj.fang.ke.com/loupan/p_jdyfhbimds/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>首开保利熙悦林语</td>
+                <td>户型：3室/4室建面220-280㎡</td>
+                <td>总价1100万/套</td>
+                <td>-</td>
+                <td>1100 万/套(总价)</td>
+                <td>旧宫镇五环路与德贤路交叉口东150米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_skblxylybiead/" target="_blank">//bj.fang.ke.com/loupan/p_skblxylybiead/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>金融街金悦府</td>
+                <td>户型：2室/3室建面83-129㎡</td>
+                <td>总价412万/套</td>
+                <td>-</td>
+                <td>50000 元/平(均价)</td>
+                <td>4号线义和庄地铁站往北400米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_jrjjyfbifbi/" target="_blank">//bj.fang.ke.com/loupan/p_jrjjyfbifbi/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>颐璟万和</td>
+                <td>户型：4室建面80-135㎡</td>
+                <td>总价753万/套</td>
+                <td>-</td>
+                <td>55016 元/平(均价)</td>
+                <td>新源大街4号线义和庄地铁向北约500米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_yjwhbimfy/" target="_blank">//bj.fang.ke.com/loupan/p_yjwhbimfy/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>和悦华锦</td>
+                <td>户型：3室/4室建面89-135㎡</td>
+                <td>总价460万/套</td>
+                <td>-</td>
+                <td>52695 元/平(均价)</td>
+                <td>博兴八路与兴海一街交叉口西南侧100米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_hyhjbimmj/" target="_blank">//bj.fang.ke.com/loupan/p_hyhjbimmj/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>北京城建海梓府</td>
+                <td>户型：4室/5室建面280-360㎡</td>
+                <td>总价1400万/套</td>
+                <td>-</td>
+                <td>1400 万/套(总价)</td>
+                <td>三海子东路与姜场街交汇处南150米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_aaizj/" target="_blank">//bj.fang.ke.com/loupan/p_aaizj/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中海云筑</td>
+                <td>户型：3室建面89㎡</td>
+                <td>总价340万/套</td>
+                <td>-</td>
+                <td>340 万/套(总价)</td>
+                <td>京开高速庞各庄桥西1500米（庞各庄镇宏轩饺子馆儿对面）</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zhyzbixxw/" target="_blank">//bj.fang.ke.com/loupan/p_zhyzbixxw/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中海云筑</td>
+                <td>户型：4室建面266㎡</td>
+                <td>总价860万/套</td>
+                <td>-</td>
+                <td>750 万/套(总价)</td>
+                <td>京开高速庞各庄桥西1500米，团结路北（庞各庄镇宏轩饺子馆儿对面）</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zhyzbixyb/" target="_blank">//bj.fang.ke.com/loupan/p_zhyzbixyb/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>招商雍合府</td>
+                <td>户型：2室/3室/4室建面84-131㎡</td>
+                <td>总价460万/套</td>
+                <td>-</td>
+                <td>55800 元/平(均价)</td>
+                <td>兴业大街与清源西路交汇处西南角（地铁4号线清源路站西侧800米）</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zsyhfbjgqz/" target="_blank">//bj.fang.ke.com/loupan/p_zsyhfbjgqz/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>金隅·金麟府</td>
+                <td>户型：3室/4室建面89-141㎡</td>
+                <td>总价468万/套</td>
+                <td>-</td>
+                <td>52695 元/平(均价)</td>
+                <td>博兴八路与兴海一街交叉口西北侧</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_jylfbjgrj/" target="_blank">//bj.fang.ke.com/loupan/p_jylfbjgrj/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中海云熙</td>
+                <td>户型：2室/3室建面76-89㎡</td>
+                <td>总价309万/套</td>
+                <td>-</td>
+                <td>37700 元/平(均价)</td>
+                <td>魏善庄新城南中轴路东侧500米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zhyxbjjre/" target="_blank">//bj.fang.ke.com/loupan/p_zhyxbjjre/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>大兴金茂悦</td>
+                <td>户型：2室/3室/4室建面74-104㎡</td>
+                <td>总价291万/套</td>
+                <td>-</td>
+                <td>37500 元/平(均价)</td>
+                <td>南中轴与龙江路交汇处东300米（世界月季公园北500米）</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_dxjmybjnud/" target="_blank">//bj.fang.ke.com/loupan/p_dxjmybjnud/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>海晏春秋</td>
+                <td>户型：4室建面307-393㎡</td>
+                <td>总价1300万/套</td>
+                <td>-</td>
+                <td>52449 元/平(均价)</td>
+                <td>灜安街与经二路交汇处西北角</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_whflbjopc/" target="_blank">//bj.fang.ke.com/loupan/p_whflbjopc/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中铁华侨城和园</td>
+                <td>户型：4室建面198-370㎡</td>
+                <td>总价1350万/套</td>
+                <td>-</td>
+                <td>50000 元/平(均价)</td>
+                <td>南五环南海子公园西侧约500米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zthqchybkiwm/" target="_blank">//bj.fang.ke.com/loupan/p_zthqchybkiwm/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>金地旭辉·江山风华</td>
+                <td>户型：3室/4室建面89-136㎡</td>
+                <td>总价480万/套</td>
+                <td>-</td>
+                <td>55800 元/平(均价)</td>
+                <td>地铁4号线清源路站西侧800米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_jdxhjsfhbkmaf/" target="_blank">//bj.fang.ke.com/loupan/p_jdxhjsfhbkmaf/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>金隅学府</td>
+                <td>户型：2室/3室/4室建面82-139㎡</td>
+                <td>总价374万/套</td>
+                <td>-</td>
+                <td>52695 元/平(均价)</td>
+                <td>兴海路金隅学府</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_jyxfbknry/" target="_blank">//bj.fang.ke.com/loupan/p_jyxfbknry/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中国铁建国际公馆</td>
+                <td>户型：2室/3室/4室建面80-150㎡</td>
+                <td>总价365万/套</td>
+                <td>-</td>
+                <td>52590 元/平(均价)</td>
+                <td>博兴十路中国铁建国际公馆</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zgtjgjggbknwp/" target="_blank">//bj.fang.ke.com/loupan/p_zgtjgjggbknwp/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>北京城建宽院国誉府</td>
+                <td>户型：4室建面152-240㎡</td>
+                <td>总价420万/套</td>
+                <td>-</td>
+                <td>31000 元/平(均价)</td>
+                <td>南北大街北京城建宽院国誉府</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_bjcjkygyfbkrog/" target="_blank">//bj.fang.ke.com/loupan/p_bjcjkygyfbkrog/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中海寰宇时代</td>
+                <td>户型：2室/3室/4室建面70-112㎡</td>
+                <td>总价374万/套</td>
+                <td>-</td>
+                <td>52449 元/平(均价)</td>
+                <td>大兴区瀛昌街与经二路交叉口东北150米</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zhhysdbksho/" target="_blank">//bj.fang.ke.com/loupan/p_zhhysdbksho/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>住总如院</td>
+                <td>户型：2室/3室/4室建面98-233㎡</td>
+                <td>总价314万/套</td>
+                <td>-</td>
+                <td>31136 元/平(均价)</td>
+                <td>采育镇采华路南端</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zzrybkwcr/" target="_blank">//bj.fang.ke.com/loupan/p_zzrybkwcr/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>住总如院</td>
+                <td>户型：3室/4室建面240-440㎡</td>
+                <td>总价550万/套</td>
+                <td>-</td>
+                <td>31136 元/平(均价)</td>
+                <td>采育镇波尔多小镇南区</td>
+                <td><a href="http:////bj.fang.ke.com/loupan/p_zzrybkxho/" target="_blank">//bj.fang.ke.com/loupan/p_zzrybkxho/</a></td>
+                <td>贝壳</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>西山上品湾MOMA</td>
+                <td>3室/4室建面130-150㎡</td>
+                <td>总价460万/套</td>
+                <td>-</td>
+                <td>37500 元/平(均价)</td>
+                <td>阳坊镇温南路与阳八路交汇处</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_xsspwmbkqax/" target="_blank">//bj.fang.lianjia.com//loupan/p_xsspwmbkqax/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>北京城建宽院国誉府</td>
+                <td></td>
+                <td></td>
+                <td>-</td>
+                <td>31000 元/平(均价)</td>
+                <td>南北大街北京城建宽院国誉府</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_bjcjkygyfbkrnz/" target="_blank">//bj.fang.lianjia.com//loupan/p_bjcjkygyfbkrnz/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中海寰宇时代</td>
+                <td>2室/3室/4室建面70-112㎡</td>
+                <td>总价374万/套</td>
+                <td>-</td>
+                <td>52449 元/平(均价)</td>
+                <td>大兴区瀛昌街与经二路交叉口东北150米</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_zhhysdbksho/" target="_blank">//bj.fang.lianjia.com//loupan/p_zhhysdbksho/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>住总如院</td>
+                <td>2室/3室/4室建面98-233㎡</td>
+                <td>总价314万/套</td>
+                <td>-</td>
+                <td>31136 元/平(均价)</td>
+                <td>采育镇采华路南端</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_zzrybkwcr/" target="_blank">//bj.fang.lianjia.com//loupan/p_zzrybkwcr/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>和悦春风</td>
+                <td>3室/4室建面82-107㎡</td>
+                <td>总价273万/套</td>
+                <td>-</td>
+                <td>35000 元/平(均价)</td>
+                <td>庞各庄镇瓜乡路与永兴河交汇处</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_hycfbkzcf/" target="_blank">//bj.fang.lianjia.com//loupan/p_hycfbkzcf/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>融创公园壹号</td>
+                <td>建面73-133㎡</td>
+                <td>总价268万/套</td>
+                <td>-</td>
+                <td>40000 元/平(均价)</td>
+                <td>孙村公园西侧</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_rcgyyhbkzwc/" target="_blank">//bj.fang.lianjia.com//loupan/p_rcgyyhbkzwc/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>小营路5号</td>
+                <td>2室/3室建面109-150㎡</td>
+                <td>总价762万/套</td>
+                <td>-</td>
+                <td>67000 元/平(均价)</td>
+                <td>小营路5号</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_xyl5hbkzzn/" target="_blank">//bj.fang.lianjia.com//loupan/p_xyl5hbkzzn/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>恒大华府</td>
+                <td>4室/5室建面271-338㎡</td>
+                <td>总价2700万/套</td>
+                <td>-</td>
+                <td>88000 元/平(均价)</td>
+                <td>东坝中街与单店北街交汇处西北侧</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_hdhfaalqa/" target="_blank">//bj.fang.lianjia.com//loupan/p_hdhfaalqa/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>MAHA缦合北京</td>
+                <td>4室/5室/7室建面450-900㎡</td>
+                <td>总价7000万/套</td>
+                <td>-</td>
+                <td>159000 元/平(均价)</td>
+                <td>将台街道霄云路8号</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_xylaampv/" target="_blank">//bj.fang.lianjia.com//loupan/p_xylaampv/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>山水文园五期</td>
+                <td>2室建面153㎡</td>
+                <td></td>
+                <td>-</td>
+                <td>1300 万/套(总价)</td>
+                <td>弘燕东路与西大望路交叉口向东100米</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_sswyaamyo/" target="_blank">//bj.fang.lianjia.com//loupan/p_sswyaamyo/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>未来金茂府</td>
+                <td>4室建面120-160㎡</td>
+                <td>总价920万/套</td>
+                <td>-</td>
+                <td>920 万/套(总价)</td>
+                <td>未来科学城南区英才南三街</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_wljmfbjykc/" target="_blank">//bj.fang.lianjia.com//loupan/p_wljmfbjykc/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>信达·国子郡</td>
+                <td>3室建面79-115㎡</td>
+                <td>总价390万/套</td>
+                <td>-</td>
+                <td>48810 元/平(均价)</td>
+                <td>沙河镇北沙河中路与高教园附近</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_xdzjbkebv/" target="_blank">//bj.fang.lianjia.com//loupan/p_xdzjbkebv/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>京投发展公园悦府</td>
+                <td>2室/3室/4室建面86-152㎡</td>
+                <td>总价495万/套</td>
+                <td>-</td>
+                <td>58500 元/平(均价)</td>
+                <td>回南北路与科星西路交汇路口处（8号线平西府站向东200米）</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_aabaq/" target="_blank">//bj.fang.lianjia.com//loupan/p_aabaq/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>北京怡园</td>
+                <td>3室/4室建面95-170㎡</td>
+                <td>总价460万/套</td>
+                <td>-</td>
+                <td>460 万/套(总价)</td>
+                <td>水库路与昌崔路交汇处向北1公里路东</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_bjyyaadjy/" target="_blank">//bj.fang.lianjia.com//loupan/p_bjyyaadjy/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>东方蓝海中心</td>
+                <td>3室/4室建面104-136㎡</td>
+                <td>总价550万/套</td>
+                <td>-</td>
+                <td>52000 元/平(均价)</td>
+                <td>未来科技城南区内科技城路与南区一路交界处</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_dflhzxablaf/" target="_blank">//bj.fang.lianjia.com//loupan/p_dflhzxablaf/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>未来公元</td>
+                <td>3室/4室建面104-169㎡</td>
+                <td>总价630万/套</td>
+                <td>-</td>
+                <td>60800 元/平(均价)</td>
+                <td>京承高速北七家出口800米路南</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_wlgyabloz/" target="_blank">//bj.fang.lianjia.com//loupan/p_wlgyabloz/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>融尚未来</td>
+                <td>3室建面138-220㎡</td>
+                <td>总价800万/套</td>
+                <td>-</td>
+                <td>59000 元/平(均价)</td>
+                <td>未来科学城南区鲁瞳西路和南区三街交叉口西行50米</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_rswlabqly/" target="_blank">//bj.fang.lianjia.com//loupan/p_rswlabqly/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>招商都会湾</td>
+                <td>3室/4室建面88-135㎡</td>
+                <td>总价380万/套</td>
+                <td>-</td>
+                <td>43000 元/平(均价)</td>
+                <td>内环西路招商都会中心</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_zsdhzxacpea/" target="_blank">//bj.fang.lianjia.com//loupan/p_zsdhzxacpea/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>华润理想国</td>
+                <td>3室/4室建面90-140㎡</td>
+                <td>总价600万/套</td>
+                <td>-</td>
+                <td>49520 元/平(均价)</td>
+                <td>北七家镇立汤路与北清路交叉点向东800米北清路南侧</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_hrlxgbidvs/" target="_blank">//bj.fang.lianjia.com//loupan/p_hrlxgbidvs/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>中海丽春湖墅·SMART墅</td>
+                <td>3室建面89-260㎡</td>
+                <td>总价660万/套</td>
+                <td>-</td>
+                <td>660 万/套(总价)</td>
+                <td>地铁昌平线沙河地铁站南600米</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_zhlchsbifdm/" target="_blank">//bj.fang.lianjia.com//loupan/p_zhlchsbifdm/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>和悦华玺</td>
+                <td>4室建面89-129㎡</td>
+                <td>总价650万/套</td>
+                <td>-</td>
+                <td>49800 元/平(均价)</td>
+                <td>北七家正北五环外，立汤路与北清路交汇处东行800米</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_hyhxbimmq/" target="_blank">//bj.fang.lianjia.com//loupan/p_hyhxbimmq/</a></td>
+                <td>链家</td>
+            </tr>
+            <tr>
+                <td>新增</td>
+                <td>金辰府</td>
+                <td>3室/4室建面89-143㎡</td>
+                <td>总价400万/套</td>
+                <td>-</td>
+                <td>53000 元/平(均价)</td>
+                <td>北五环定泗路北七家镇政府正南</td>
+                <td><a href="http:////bj.fang.lianjia.com//loupan/p_jcfbjyid/" target="_blank">//bj.fang.lianjia.com//loupan/p_jcfbjyid/</a></td>
+                <td>链家</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th>升降标志</th>
+                <th>房屋名</th>
+                <th>房屋备注</th>
+                <th>房屋总价</th>
+                <th>房屋历史总价</th>
+                <th>房屋单价</th>
+                <th>小区名</th>
+                <th>房屋链接</th>
+                <th>来源网站</th>
+            </tr>
+            </tfoot>
+        </table>
+None
+None
+</div>
+</body>
+</html>
